@@ -102,3 +102,46 @@ Pods are running!
 
 ![image](https://github.com/kohlidevops/ultimate-cicd-pipeline-maven-sonar-argocd-k8/assets/100069489/09402571-a5dd-4cba-ae13-74f5ec2d0174)
 
+### To check the svc
+
+If im checking with svc then it showing NodePort
+
+```
+kubectl get svc
+```
+
+![image](https://github.com/kohlidevops/ultimate-cicd-pipeline-maven-sonar-argocd-k8/assets/100069489/cb854fcb-73c1-468a-9060-e5c5238b34d1)
+
+### To change the NodePort to ClusterIP
+
+To change ClusterIP for this app using below commands
+
+```
+kubectl get svc
+kubectl get service spring-boot-app-service -o yaml > service.yaml
+sudo nano service.yaml
+
+change
+NodePort to ClusterIP in "type"
+save and exit
+
+kubectl apply -f service.yaml
+kubectl get svc
+```
+
+Now its listening with ClusterIP
+
+![image](https://github.com/kohlidevops/ultimate-cicd-pipeline-maven-sonar-argocd-k8/assets/100069489/8325dd7a-5264-48ec-b756-7135688f4b64)
+
+Bydefault, this app is running with port:80.
+
+So we can port-forward with some other port to avoid conflicting. Just use below command to access the app with port:9090
+
+```
+nohup kubectl port-forward svc/spring-boot-app-service 9090:80 --address='0.0.0.0' &
+```
+
+Now I can able to access the app through browser
+
+![image](https://github.com/kohlidevops/ultimate-cicd-pipeline-maven-sonar-argocd-k8/assets/100069489/d76773f5-2b12-44c4-aa8c-e8012077b229)
+
