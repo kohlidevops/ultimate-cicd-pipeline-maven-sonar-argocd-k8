@@ -73,3 +73,32 @@ To setup the ArgoCD with minikube (kubernetes) pls use the following link.
 https://github.com/kohlidevops/GitOps-ArgoCD
 ```
 
+Yup! It has been installed successfully and i can see my argocd portal
+
+![image](https://github.com/kohlidevops/ultimate-cicd-pipeline-maven-sonar-argocd-k8/assets/100069489/bf1d410b-07c3-47aa-9f70-2902cc0e57df)
+
+To create a new application in ArgoCD
+
+![image](https://github.com/kohlidevops/ultimate-cicd-pipeline-maven-sonar-argocd-k8/assets/100069489/fe005fb3-acfb-4227-9fac-aa1d0ee91b97)
+
+![image](https://github.com/kohlidevops/ultimate-cicd-pipeline-maven-sonar-argocd-k8/assets/100069489/0a3fe503-b82d-4e9f-81f8-0b4d1ced298c)
+
+![image](https://github.com/kohlidevops/ultimate-cicd-pipeline-maven-sonar-argocd-k8/assets/100069489/0e0491f3-af62-4e9e-8061-d9074e8c3c29)
+
+##### Namespace would be "default". Its missing here!
+
+Then create a application. My application has been deployed successfully.
+
+![image](https://github.com/kohlidevops/ultimate-cicd-pipeline-maven-sonar-argocd-k8/assets/100069489/090500fb-7ff8-4e0e-80e5-1eee9881f63c)
+
+### To check kubectl deploy and pods
+
+```
+kubectl get deploy
+kubectl get pods
+```
+
+Pods are running! 
+
+![image](https://github.com/kohlidevops/ultimate-cicd-pipeline-maven-sonar-argocd-k8/assets/100069489/09402571-a5dd-4cba-ae13-74f5ec2d0174)
+
