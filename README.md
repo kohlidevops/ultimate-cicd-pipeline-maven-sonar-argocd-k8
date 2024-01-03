@@ -58,3 +58,18 @@ First add a token
 Then add a stage
 
 ![image](https://github.com/kohlidevops/ultimate-cicd-pipeline-maven-sonar-argocd-k8/assets/100069489/de39630b-0b74-46ad-86c5-036c7a3ea3d8)
+
+### start the build and check the CI status
+
+![image](https://github.com/kohlidevops/ultimate-cicd-pipeline-maven-sonar-argocd-k8/assets/100069489/122ce97e-c646-463d-ab72-d255245a1471)
+
+As of now, it has been succeeded with checkout, build, test, code analysis, docker build & push, finally update the build number has been replaced with Tag "replaceImageTag" in deployment yaml file of manifests repo.
+
+### Start the CD process
+
+To setup the ArgoCD with minikube (kubernetes) pls use the following link.
+
+```
+https://github.com/kohlidevops/GitOps-ArgoCD
+```
+
