@@ -141,10 +141,17 @@ So we can port-forward with some other port to avoid conflicting. Just use below
 nohup kubectl port-forward svc/spring-boot-app-service 9090:80 --address='0.0.0.0' &
 ```
 
-Now I can able to access the app through browser
+Now I can able to access the app through browser. 
 
 ![image](https://github.com/kohlidevops/ultimate-cicd-pipeline-maven-sonar-argocd-k8/assets/100069489/d76773f5-2b12-44c4-aa8c-e8012077b229)
 
 Then I did some changes in startApplication.java and update this tag "replaceImageTag" in manifests deployment.yml file. Now start the build and check the status.
 
+##### Do "To change the NodePort to ClusterIP" steps to complete
+
+![image](https://github.com/kohlidevops/ultimate-cicd-pipeline-maven-sonar-argocd-k8/assets/100069489/c281161c-2f81-48b9-963a-25c4528d0a83)
+
+Thats it
+
+##### if you are facing issue with git checkout ref origin, better to remove the workspace from Jenkins directory
 
